@@ -15,12 +15,14 @@ def feno_sintetico():
 
 
 def test_pacote_regiao_filtra_e_ordena():
-    esp = {"111": {"nome": "Andorinha","cientifico": "Hirundo rustica", "grupo": "aves"},
+    esp = {"111": {"nome": "Andorinha", "cientifico": "Hirundo rustica", "grupo": "aves",
+                   "imagem": "Hirundo%20rustica%2C%20Portugal.jpg"},
            "222": {"nome": None, "cientifico": "Rara rara", "grupo": "plantas"}}
     p = pacote_regiao(feno_sintetico(), esp)
     assert p["totais"] == [1000 * m for m in range(1, 13)]
     assert [l[0] for l in p["especies"]] == [111]  # a rara (2 observações) fica de fora
     assert p["especies"][0][1] == "andorinha"  # minúscula inicial, como nos guias de campo
+    assert p["especies"][0][5] == "Hirundo rustica, Portugal.jpg"  # nome verdadeiro: a app codifica uma vez
     assert p["especies"][0][6] ==[0, 0, 0, 50, 50, 50, 0, 0, 0, 0, 0, 0]
 
 

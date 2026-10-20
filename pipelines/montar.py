@@ -13,6 +13,7 @@ import datetime
 import json
 import sys
 from pathlib import Path
+from urllib.parse import unquote  # especies.json antigos têm o nome do ficheiro do Commons codificado
 
 LIMIAR_REGIAO = 5  # observações da espécie na região (todos os meses) para entrar no pacote
 MINIMO_ESPECIES = 500  # abaixo disto numa região, os dados vieram estragados
@@ -33,7 +34,7 @@ def pacote_regiao(feno, especies, limiar=LIMIAR_REGIAO):
         contagens = [meses[str(m)]["especies"].get(k, 0) for m in range(1, 13)]
         if sum(contagens) >= limiar:
             linhas.append([int(k), minuscula(e.get("nome")),e.get("cientifico"), e.get("grupo"), e.get("iucn"),
-                           e.get("imagem"), contagens])
+                           unquote(e["imagem"]) if e.get("imagem") else None, contagens])
     linhas.sort(key=lambda l: -sum(l[6]))
     return {"versao": 1, "regiao": feno["regiao"], "nome": feno["nome"],
             "gerado": datetime.date.today().isoformat(), "fontes": FONTES, "totais": totais, "especies": linhas}

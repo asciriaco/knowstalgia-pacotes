@@ -14,6 +14,7 @@ import json
 import sys
 import time
 from pathlib import Path
+from urllib.parse import unquote
 
 import requests
 
@@ -119,7 +120,9 @@ def wikidata(chaves):
             if nome and nome != d.get("cientifico"):
                 d.setdefault("nome", nome)
             if "imagem" in b:
-                d.setdefault("imagem", b["imagem"]["value"].rsplit("/", 1)[-1])
+                # a Wikidata dá o URL com o nome já codificado («Ficedula%20hypoleuca…»): guarda-se o nome
+                # verdadeiro, e a app codifica-o uma vez só
+                d.setdefault("imagem", unquote(b["imagem"]["value"].rsplit("/", 1)[-1]))
         print(f"  Wikidata {min(i + 300, len(lista))}/{len(lista)}", flush=True)
         time.sleep(1)
     return out
