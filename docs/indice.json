@@ -1,0 +1,127 @@
+{
+ "versao": 1,
+ "gerado": "2026-10-20",
+ "fontes": "Observações: GBIF.org (CC BY 4.0 / CC0 / CC BY-NC, por registo; uso não-comercial). Nomes e fotografias: Wikidata (CC0) e Wikimedia Commons (licença de cada ficheiro).",
+ "regioes": [
+  {
+   "regiao": "acores",
+   "nome": "Açores",
+   "especies": 1367,
+   "bytes": 174098
+  },
+  {
+   "regiao": "aveiro",
+   "nome": "Aveiro",
+   "especies": 2217,
+   "bytes": 275385
+  },
+  {
+   "regiao": "beja",
+   "nome": "Beja",
+   "especies": 2220,
+   "bytes": 272798
+  },
+  {
+   "regiao": "braga",
+   "nome": "Braga",
+   "especies": 1753,
+   "bytes": 217517
+  },
+  {
+   "regiao": "braganca",
+   "nome": "Bragança",
+   "especies": 2881,
+   "bytes": 339404
+  },
+  {
+   "regiao": "castelo-branco",
+   "nome": "Castelo Branco",
+   "especies": 1930,
+   "bytes": 237518
+  },
+  {
+   "regiao": "coimbra",
+   "nome": "Coimbra",
+   "especies": 2836,
+   "bytes": 350225
+  },
+  {
+   "regiao": "evora",
+   "nome": "Évora",
+   "especies": 1814,
+   "bytes": 222655
+  },
+  {
+   "regiao": "faro",
+   "nome": "Faro",
+   "especies": 4026,
+   "bytes": 490959
+  },
+  {
+   "regiao": "guarda",
+   "nome": "Guarda",
+   "especies": 2261,
+   "bytes": 273762
+  },
+  {
+   "regiao": "leiria",
+   "nome": "Leiria",
+   "especies": 2654,
+   "bytes": 327483
+  },
+  {
+   "regiao": "lisboa",
+   "nome": "Lisboa",
+   "especies": 3227,
+   "bytes": 401408
+  },
+  {
+   "regiao": "madeira",
+   "nome": "Madeira",
+   "especies": 1402,
+   "bytes": 174482
+  },
+  {
+   "regiao": "portalegre",
+   "nome": "Portalegre",
+   "especies": 1820,
+   "bytes": 225576
+  },
+  {
+   "regiao": "porto",
+   "nome": "Porto",
+   "especies": 2201,
+   "bytes": 273379
+  },
+  {
+   "regiao": "santarem",
+   "nome": "Santarém",
+   "especies": 2232,
+   "bytes": 276265
+  },
+  {
+   "regiao": "setubal",
+   "nome": "Setúbal",
+   "especies": 3101,
+   "bytes": 381267
+  },
+  {
+   "regiao": "viana-do-castelo",
+   "nome": "Viana do Castelo",
+   "especies": 1857,
+   "bytes": 227107
+  },
+  {
+   "regiao": "vila-real",
+   "nome": "Vila Real",
+   "especies": 2066,
+   "bytes": 248005
+  },
+  {
+   "regiao": "viseu",
+   "nome": "Viseu",
+   "especies": 1615,
+   "bytes": 198631
+  }
+ ]
+}

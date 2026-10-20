@@ -1,0 +1,45 @@
+﻿name: pacotes mensais
+
+on:
+  schedule:
+    - cron: "0 4 3 * *" # dia 3 de cada mês, 04:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  pacotes:
+    runs-on: ubuntu-latest
+    # ~260 pedidos ao GBIF a 1,2 s mais os recuos quando trava, e a Wikidata: ~40 min normalmente.
+    # Uma corrida CANCELADA por tempo não avisa ninguém — por isso há folga.
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements-dev.txt
+      - name: testes
+        working-directory: pipelines
+        run: python -m pytest -q
+      - name: fenologia (GBIF)
+        working-directory: pipelines
+        run: python -u fenologia.py ../brutos
+      - name: espécies (GBIF + Wikidata)
+        working-directory: pipelines
+        run: python -u especies.py ../brutos
+      - name: nomes portugueses (GBIF, só as espécies novas — o resto está em nomes/)
+        working-directory: pipelines
+        run: python -u nomes.py ../brutos ../nomes/vernaculos_gbif.json
+      - name: montar os pacotes
+        working-directory: pipelines
+        run: python -u montar.py ../brutos ../docs ../nomes/vernaculos_gbif.json
+      - name: publicar
+        run: |
+          git config user.name "knowstalgia-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs nomes
+          git diff --cached --quiet && echo "sem alterações" && exit 0
+          git commit -m "pacotes de $(date -u +%Y-%m)"
+          git push
