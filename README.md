@@ -1,4 +1,4 @@
-﻿# knowstalgia-pacotes
+# knowstalgia-pacotes
 
 Os pacotes de dados abertos que a app **Knowstalgia** descarrega: o que anda por aí, mês a mês, em
 cada uma das 20 regiões de Portugal (18 distritos, Açores e Madeira) — aves, plantas, cogumelos,
@@ -23,7 +23,7 @@ aqui — isso vive num repositório privado.
   de observação. Há muito mais gente a observar em Abril do que em Janeiro, por isso a app compara
   **frequências** (`contagem ÷ total`), nunca contagens.
 - `gbif` — chave da espécie no GBIF (`https://www.gbif.org/species/<gbif>`).
-- `nome_pt` — nome português da Wikidata ou, sem ele, o nome vernáculo do GBIF mais apoiado pelas fontes (a EUNIS, europeia, pesa mais); `null` quando não há (nunca o nome científico repetido). Os do GBIF ficam em `nomes/` para não se repetirem os pedidos.
+- `nome_pt` — nome português da Wikidata ou, sem ele, o nome vernáculo do GBIF mais apoiado pelas fontes (a EUNIS, europeia, pesa mais); `null` quando não há (nunca o nome científico repetido). Os do GBIF ficam em `nomes/` para não se repetirem os pedidos. Cobertura em 2026-10-20: 3 196 de 8 254 espécies (39%) — 1 035 da Wikidata, 2 161 do GBIF; o resto são sobretudo insectos, líquenes e plantas pequenas sem nome comum em fonte aberta.
 - `grupo` — aves, plantas, cogumelos e fungos, borboletas, libélulas, abelhas e vespas,
   escaravelhos, insectos, aranhas, mamíferos, anfíbios, répteis, tubarões e raias, crustáceos,
   moluscos, estrelas e ouriços-do-mar, anémonas e medusas, ascídias, peixes, algas, outros.
