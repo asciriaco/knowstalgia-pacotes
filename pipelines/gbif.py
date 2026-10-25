@@ -10,7 +10,7 @@ import time
 import requests
 
 API = "https://api.gbif.org/v1"
-UA = "Knowstalgia/0.1 (almanaque natural, nao-comercial; github.com/asciriaco)"
+UA = "Almanact/0.1 (almanaque natural, nao-comercial; github.com/asciriaco)"
 
 
 class Gbif:

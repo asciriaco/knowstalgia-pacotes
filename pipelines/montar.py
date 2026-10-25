@@ -26,6 +26,18 @@ def minuscula(nome):
     return nome[0].lower() + nome[1:] if nome else nome
 
 
+def nome_portugues(nome, cientifico):
+    """O nome, se for mesmo português: a Wikidata às vezes põe no rótulo PT o científico em minúsculas
+    («datura stramonium») ou só o género («Smyrnium»). Nesses casos não há nome — e o GBIF pode dar um."""
+    if not nome:
+        return None
+    n, c = nome.strip(), (cientifico or "").strip()
+    if n.lower() == c.lower():
+        return None
+    # o género escrito como em latim («Calluna») não é nome; «malva», em minúsculas, é
+    return None if n == c.split(" ")[0] else nome
+
+
 def pacote_regiao(feno, especies, limiar=LIMIAR_REGIAO):
     meses = feno["meses"]
     totais = [meses[str(m)]["total"] for m in range(1, 13)]
@@ -33,7 +45,7 @@ def pacote_regiao(feno, especies, limiar=LIMIAR_REGIAO):
     for k, e in especies.items():
         contagens = [meses[str(m)]["especies"].get(k, 0) for m in range(1, 13)]
         if sum(contagens) >= limiar:
-            linhas.append([int(k), minuscula(e.get("nome")),e.get("cientifico"), e.get("grupo"), e.get("iucn"),
+            linhas.append([int(k), minuscula(nome_portugues(e.get("nome"), e.get("cientifico"))), e.get("cientifico"), e.get("grupo"), e.get("iucn"),
                            unquote(e["imagem"]) if e.get("imagem") else None, contagens])
     linhas.sort(key=lambda l: -sum(l[6]))
     return {"versao": 1, "regiao": feno["regiao"], "nome": feno["nome"],
@@ -46,6 +58,7 @@ def main():
     if len(sys.argv) > 3 and Path(sys.argv[3]).exists():  # os nomes do GBIF (nomes.py), mesmo a meio
         vern = json.loads(Path(sys.argv[3]).read_text(encoding="utf-8"))
         for k, e in especies.items():
+            e["nome"] = nome_portugues(e.get("nome"), e.get("cientifico"))
             if not e.get("nome") and vern.get(k):
                 e["nome"] = vern[k]
     print(f"{sum(1 for e in especies.values() if e.get('nome'))} de {len(especies)} espécies com nome português",

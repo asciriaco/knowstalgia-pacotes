@@ -49,7 +49,10 @@ def main():
     brutos, cache_f = Path(sys.argv[1]), Path(sys.argv[2])
     especies = json.loads((brutos / "especies.json").read_text(encoding="utf-8"))
     cache = json.loads(cache_f.read_text(encoding="utf-8")) if cache_f.exists() else {}
-    faltam = sorted((k for k, e in especies.items() if not e["nome"] and k not in cache),
+    from montar import nome_portugues  # um rótulo da Wikidata que é só o científico ou o género não é nome
+    for e in especies.values():
+        e["nome"] = nome_portugues(e.get("nome"), e.get("cientifico"))
+    faltam =sorted((k for k, e in especies.items() if not e["nome"] and k not in cache),
                     key=lambda k: -especies[k]["observacoes"])
     print(f"{len(faltam)} espécies por perguntar ({len(cache)} já no cache)", flush=True)
     g = Gbif()

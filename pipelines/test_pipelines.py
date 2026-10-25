@@ -26,6 +26,15 @@ def test_pacote_regiao_filtra_e_ordena():
     assert p["especies"][0][6] ==[0, 0, 0, 50, 50, 50, 0, 0, 0, 0, 0, 0]
 
 
+def test_rotulo_que_e_o_cientifico_ou_o_genero_nao_e_nome():
+    from montar import nome_portugues
+    assert nome_portugues("datura stramonium", "Datura stramonium") is None
+    assert nome_portugues("Smyrnium", "Smyrnium olusatrum") is None
+    assert nome_portugues("Salsa", "Petroselinum crispum") == "Salsa"
+    assert nome_portugues("malva", "Malva sylvestris") == "malva"  # o género em português, esse sim, é nome
+    assert nome_portugues(None, "X y") is None
+
+
 def test_20_regioes_com_slugs_unicos():
     assert len(REGIOES) == 20
     assert len({s for s, _ in REGIOES.values()}) == 20
