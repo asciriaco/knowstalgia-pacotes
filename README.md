@@ -1,6 +1,6 @@
 # knowstalgia-pacotes
 
-Os pacotes de dados abertos que a app **Knowstalgia** descarrega: o que anda por aí, mês a mês, em
+Os pacotes de dados abertos que a app **Almanact** descarrega: o que anda por aí, mês a mês, em
 cada uma das 20 regiões de Portugal (18 distritos, Açores e Madeira) — aves, plantas, cogumelos,
 borboletas, peixes e o resto.
 
@@ -32,6 +32,20 @@ aqui — isso vive num repositório privado.
 
 Uma espécie entra no pacote de uma região com **5 ou mais observações** lá, e no catálogo com
 **10 ou mais** em Portugal.
+
+## Saberes da planta (`docs/saberes.json`)
+
+Um só ficheiro para o país: o que a tradição dizia de cada planta, o que a ciência sabe e o que é
+perigoso, em blocos separados, com as fontes. Leva só **textos nossos** e referências: nunca trechos
+das obras, nem doses ou instruções de tratamento. Chave = `gbif`.
+
+Não é refeito pela actualização mensal: monta-se no repositório privado das fichas
+(`knowstalgia-dados/saberes/montar_saberes.py`) quando elas mudam. Enquanto o molde das fichas não for
+aprovado, sai vazio (só entram fichas revistas).
+
+Fontes: monografias da Agência Europeia de Medicamentos (reprodução autorizada citando a EMA),
+estudos etnobotânicos portugueses em acesso aberto (CC BY), livros antigos em domínio público e
+literatura científica citada pelo DOI.
 
 ## Como se faz
 
