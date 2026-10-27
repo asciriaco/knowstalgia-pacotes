@@ -35,6 +35,20 @@ def test_rotulo_que_e_o_cientifico_ou_o_genero_nao_e_nome():
     assert nome_portugues(None, "X y") is None
 
 
+def test_maiusculas_trocadas_e_nomes_corrigidos_com_fonte():
+    import json
+    from pathlib import Path
+
+    from montar import carregar_corrigidos, minuscula
+    assert minuscula("fAVA-DE-ÁGUA") == "fava-de-água"
+    assert minuscula("Felosa-comum") == "felosa-comum"
+    assert minuscula("erva-de-São-João") == "erva-de-São-João"  # maiúsculas a abrir palavra: nomes próprios
+    corr = carregar_corrigidos(Path(__file__).resolve().parents[1] / "nomes" / "corrigidos.json")
+    assert corr["2888728"]["nome"] == "sabugueiro"
+    assert all(c.get("fonte") for c in corr.values()), "cada correção diz de onde vem"
+    json.dumps(corr)
+
+
 def test_20_regioes_com_slugs_unicos():
     assert len(REGIOES) == 20
     assert len({s for s, _ in REGIOES.values()}) == 20

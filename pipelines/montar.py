@@ -11,6 +11,7 @@ JSON e não SQLite (como previa a arquitectura) porque o sqflite não funciona n
 """
 import datetime
 import json
+import re
 import sys
 from pathlib import Path
 from urllib.parse import unquote  # especies.json antigos têm o nome do ficheiro do Commons codificado
@@ -22,8 +23,18 @@ FONTES = ("Observações: GBIF.org (CC BY 4.0 / CC0 / CC BY-NC, por registo; uso
 
 
 def minuscula(nome):
-    """A Wikidata escreve «Felosa-comum», o GBIF «estorninho-comum»: na app vão todos como nos guias de campo."""
-    return nome[0].lower() + nome[1:] if nome else nome
+    """A Wikidata escreve «Felosa-comum», o GBIF «estorninho-comum»: na app vão todos como nos guias de campo.
+    Um nome com as maiúsculas trocadas («fAVA-DE-ÁGUA», do GBIF) vai todo em minúsculas."""
+    if not nome:
+        return nome
+    if re.search(r"[a-zà-ÿ][A-ZÀ-Þ]", nome):  # minúscula colada a maiúscula na mesma palavra
+        return nome.lower()
+    return nome[0].lower() + nome[1:]
+
+
+def carregar_corrigidos(f):
+    """Nomes corrigidos à mão, cada um com a fonte (nomes/corrigidos.json): ganham a tudo o resto."""
+    return json.loads(Path(f).read_text(encoding="utf-8")) if Path(f).exists() else {}
 
 
 def nome_portugues(nome, cientifico):
@@ -61,6 +72,10 @@ def main():
             e["nome"] = nome_portugues(e.get("nome"), e.get("cientifico"))
             if not e.get("nome") and vern.get(k):
                 e["nome"] = vern[k]
+    # a Wikidata e o GBIF erram às vezes («caneleiro» para o sabugueiro): a correção, com fonte, ganha
+    for k, c in carregar_corrigidos(Path(__file__).resolve().parents[1] / "nomes" / "corrigidos.json").items():
+        if k in especies:
+            especies[k]["nome"] = c["nome"]
     print(f"{sum(1 for e in especies.values() if e.get('nome'))} de {len(especies)} espécies com nome português",
           flush=True)
     (docs / "regioes").mkdir(parents=True, exist_ok=True)
