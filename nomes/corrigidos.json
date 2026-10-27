@@ -1,5 +1,117 @@
 {
- "2888728": {"nome": "sabugueiro", "antes": "caneleiro", "fonte": "Vinagre C., Vinagre S., Carrilho E. (2019), J Ethnobiol Ethnomed 15:30, quadro 2; Silva P.T.M. et al. (2019), Plants 8:256, quadro 1"},
- "2888763": {"nome": "valeriana", "antes": "erva-de-gato", "fonte": "Vinagre C., Vinagre S., Carrilho E. (2019), J Ethnobiol Ethnomed 15:30, quadro 2"},
- "2874508": {"nome": "abóbora-porqueira", "antes": "cabaceiro-amargoso", "fonte": "Carvalho L.M.M. (2006), Estudos de Etnobotânica e Botânica Económica no Alentejo, tese, Univ. Coimbra, p. 211"}
+ "2888728": {
+  "nome": "sabugueiro",
+  "antes": "caneleiro",
+  "fonte": "Vinagre C., Vinagre S., Carrilho E. (2019), J Ethnobiol Ethnomed 15:30, quadro 2; Silva P.T.M. et al. (2019), Plants 8:256, quadro 1"
+ },
+ "2888763": {
+  "nome": "valeriana",
+  "antes": "erva-de-gato",
+  "fonte": "Vinagre C., Vinagre S., Carrilho E. (2019), J Ethnobiol Ethnomed 15:30, quadro 2"
+ },
+ "2874508": {
+  "nome": "abóbora-porqueira",
+  "antes": "cabaceiro-amargoso",
+  "fonte": "Carvalho L.M.M. (2006), Estudos de Etnobotânica e Botânica Económica no Alentejo, tese, Univ. Coimbra, p. 211"
+ },
+ "3001956": {
+  "nome": "agrimónia",
+  "antes": "",
+  "fonte": "EMA, resumo público em português (agrimónia)"
+ },
+ "11007246": {
+  "nome": "nêveda",
+  "antes": "",
+  "fonte": "Silva P.T.M. et al. (2019), Plants 8:256, quadro 1"
+ },
+ "2890541": {
+  "nome": "erva-de-são-roberto",
+  "antes": "",
+  "fonte": "Vinagre C., Vinagre S., Carrilho E. (2019), J Ethnobiol Ethnomed 15:30, quadros 2 e 6"
+ },
+ "8204291": {
+  "nome": "calafito",
+  "antes": "",
+  "fonte": "Carvalho L.M.M. (2006), Estudos de Etnobotânica e Botânica Económica no Alentejo, tese, Univ. Coimbra"
+ },
+ "3934052": {
+  "nome": "malva-de-espanha",
+  "antes": "",
+  "fonte": "Vinagre C., Vinagre S., Carrilho E. (2019), J Ethnobiol Ethnomed 15:30, quadros 2 e 6"
+ },
+ "5384064": {
+  "nome": "figueira-da-Índia",
+  "antes": "jamaracá",
+  "fonte": "Carvalho L.M.M. (2006), Estudos de Etnobotânica e Botânica Económica no Alentejo, tese, Univ. Coimbra"
+ },
+ "8013151": {
+  "nome": "orégão",
+  "antes": "",
+  "fonte": "Vinagre C., Vinagre S., Carrilho E. (2019), J Ethnobiol Ethnomed 15:30, quadros 2 e 6"
+ },
+ "3189767": {
+  "nome": "tanchagem-maior",
+  "antes": "santage",
+  "fonte": "Vinagre C., Vinagre S., Carrilho E. (2019), J Ethnobiol Ethnomed 15:30, quadros 2 e 6"
+ },
+ "5334294": {
+  "nome": "erva-sanguinha",
+  "antes": "",
+  "fonte": "Carvalho L.M.M. (2006), Estudos de Etnobotânica e Botânica Económica no Alentejo, tese, Univ. Coimbra"
+ },
+ "7931731": {
+  "nome": "ameixeira",
+  "antes": "ameixa-comum",
+  "fonte": "Vinagre C., Vinagre S., Carrilho E. (2019), J Ethnobiol Ethnomed 15:30, quadros 2 e 6"
+ },
+ "8149923": {
+  "nome": "pessegueiro",
+  "antes": "",
+  "fonte": "Carvalho L.M.M. (2006), Estudos de Etnobotânica e Botânica Económica no Alentejo, tese, Univ. Coimbra"
+ },
+ "3023221": {
+  "nome": "abrunheiro",
+  "antes": "espinheiro",
+  "fonte": "Vinagre C., Vinagre S., Carrilho E. (2019), J Ethnobiol Ethnomed 15:30, quadros 2 e 6"
+ },
+ "5420901": {
+  "nome": "romãzeira",
+  "antes": "romã",
+  "fonte": "Carvalho L.M.M. (2006), Estudos de Etnobotânica e Botânica Económica no Alentejo, tese, Univ. Coimbra"
+ },
+ "2881550": {
+  "nome": "azinheira",
+  "antes": "carrasco",
+  "fonte": "Carvalho L.M.M. (2006), Estudos de Etnobotânica e Botânica Económica no Alentejo, tese, Univ. Coimbra"
+ },
+ "10786206": {
+  "nome": "nespereira",
+  "antes": "",
+  "fonte": "Vinagre C., Vinagre S., Carrilho E. (2019), J Ethnobiol Ethnomed 15:30, quadros 2 e 6"
+ },
+ "5359395": {
+  "nome": "trevo-de-folhas-estreitas",
+  "antes": "",
+  "fonte": "Carvalho L.M.M. (2006), Estudos de Etnobotânica e Botânica Económica no Alentejo, tese, Univ. Coimbra"
+ },
+ "5372392": {
+  "nome": "videira",
+  "antes": "uva",
+  "fonte": "Carvalho L.M.M. (2006), Estudos de Etnobotânica e Botânica Económica no Alentejo, tese, Univ. Coimbra"
+ },
+ "5334186": {
+  "nome": "celidónia",
+  "antes": "ceruda",
+  "fonte": "Vinagre C., Vinagre S., Carrilho E. (2019), J Ethnobiol Ethnomed 15:30, quadros 2 e 6"
+ },
+ "3021922": {
+  "nome": "ginjeira",
+  "antes": "Ginja",
+  "fonte": "Vinagre C., Vinagre S., Carrilho E. (2019), J Ethnobiol Ethnomed 15:30, quadros 2 e 6"
+ },
+ "3112364": {
+  "nome": "cardo-do-coalho",
+  "antes": "Cardo",
+  "fonte": "Carvalho L.M.M. (2006), Estudos de Etnobotânica e Botânica Económica no Alentejo, tese, Univ. Coimbra"
+ }
 }

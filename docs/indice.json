@@ -7,121 +7,121 @@
    "regiao": "acores",
    "nome": "Açores",
    "especies": 1367,
-   "bytes": 170299
+   "bytes": 170386
   },
   {
    "regiao": "aveiro",
    "nome": "Aveiro",
    "especies": 2217,
-   "bytes": 271788
+   "bytes": 271899
   },
   {
    "regiao": "beja",
    "nome": "Beja",
    "especies": 2220,
-   "bytes": 270220
+   "bytes": 270343
   },
   {
    "regiao": "braga",
    "nome": "Braga",
    "especies": 1753,
-   "bytes": 214017
+   "bytes": 214115
   },
   {
    "regiao": "braganca",
    "nome": "Bragança",
    "especies": 2881,
-   "bytes": 333638
+   "bytes": 333738
   },
   {
    "regiao": "castelo-branco",
    "nome": "Castelo Branco",
    "especies": 1930,
-   "bytes": 234563
+   "bytes": 234687
   },
   {
    "regiao": "coimbra",
    "nome": "Coimbra",
    "especies": 2836,
-   "bytes": 345284
+   "bytes": 345411
   },
   {
    "regiao": "evora",
    "nome": "Évora",
    "especies": 1814,
-   "bytes": 220288
+   "bytes": 220415
   },
   {
    "regiao": "faro",
    "nome": "Faro",
    "especies": 4026,
-   "bytes": 482505
+   "bytes": 482629
   },
   {
    "regiao": "guarda",
    "nome": "Guarda",
    "especies": 2261,
-   "bytes": 269759
+   "bytes": 269866
   },
   {
    "regiao": "leiria",
    "nome": "Leiria",
    "especies": 2654,
-   "bytes": 322942
+   "bytes": 323069
   },
   {
    "regiao": "lisboa",
    "nome": "Lisboa",
    "especies": 3227,
-   "bytes": 395046
+   "bytes": 395173
   },
   {
    "regiao": "madeira",
    "nome": "Madeira",
    "especies": 1402,
-   "bytes": 171472
+   "bytes": 171583
   },
   {
    "regiao": "portalegre",
    "nome": "Portalegre",
    "especies": 1820,
-   "bytes": 222824
+   "bytes": 222943
   },
   {
    "regiao": "porto",
    "nome": "Porto",
    "especies": 2201,
-   "bytes": 269245
+   "bytes": 269342
   },
   {
    "regiao": "santarem",
    "nome": "Santarém",
    "especies": 2232,
-   "bytes": 273010
+   "bytes": 273140
   },
   {
    "regiao": "setubal",
    "nome": "Setúbal",
    "especies": 3101,
-   "bytes": 376198
+   "bytes": 376322
   },
   {
    "regiao": "viana-do-castelo",
    "nome": "Viana do Castelo",
    "especies": 1857,
-   "bytes": 223888
+   "bytes": 223973
   },
   {
    "regiao": "vila-real",
    "nome": "Vila Real",
    "especies": 2066,
-   "bytes": 244188
+   "bytes": 244282
   },
   {
    "regiao": "viseu",
    "nome": "Viseu",
    "especies": 1615,
-   "bytes": 196320
+   "bytes": 196418
   }
  ]
 }
