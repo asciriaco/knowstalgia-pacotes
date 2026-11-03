@@ -1,127 +1,127 @@
 {
  "versao": 1,
- "gerado": "2026-10-27",
+ "gerado": "2026-11-03",
  "fontes": "Observações: GBIF.org (CC BY 4.0 / CC0 / CC BY-NC, por registo; uso não-comercial). Nomes e fotografias: Wikidata (CC0) e Wikimedia Commons (licença de cada ficheiro).",
  "regioes": [
   {
    "regiao": "acores",
    "nome": "Açores",
-   "especies": 1367,
-   "bytes": 170386
+   "especies": 1377,
+   "bytes": 171515
   },
   {
    "regiao": "aveiro",
    "nome": "Aveiro",
-   "especies": 2217,
-   "bytes": 271899
+   "especies": 2218,
+   "bytes": 271927
   },
   {
    "regiao": "beja",
    "nome": "Beja",
-   "especies": 2220,
-   "bytes": 270343
+   "especies": 2224,
+   "bytes": 270875
   },
   {
    "regiao": "braga",
    "nome": "Braga",
-   "especies": 1753,
-   "bytes": 214115
+   "especies": 1754,
+   "bytes": 214233
   },
   {
    "regiao": "braganca",
    "nome": "Bragança",
-   "especies": 2881,
-   "bytes": 333738
+   "especies": 2883,
+   "bytes": 333945
   },
   {
    "regiao": "castelo-branco",
    "nome": "Castelo Branco",
-   "especies": 1930,
-   "bytes": 234687
+   "especies": 1933,
+   "bytes": 235000
   },
   {
    "regiao": "coimbra",
    "nome": "Coimbra",
-   "especies": 2836,
-   "bytes": 345411
+   "especies": 2838,
+   "bytes": 345516
   },
   {
    "regiao": "evora",
    "nome": "Évora",
-   "especies": 1814,
-   "bytes": 220415
+   "especies": 1816,
+   "bytes": 220689
   },
   {
    "regiao": "faro",
    "nome": "Faro",
-   "especies": 4026,
-   "bytes": 482629
+   "especies": 4025,
+   "bytes": 482603
   },
   {
    "regiao": "guarda",
    "nome": "Guarda",
-   "especies": 2261,
-   "bytes": 269866
+   "especies": 2257,
+   "bytes": 269196
   },
   {
    "regiao": "leiria",
    "nome": "Leiria",
-   "especies": 2654,
-   "bytes": 323069
+   "especies": 2652,
+   "bytes": 322633
   },
   {
    "regiao": "lisboa",
    "nome": "Lisboa",
-   "especies": 3227,
-   "bytes": 395173
+   "especies": 3229,
+   "bytes": 395307
   },
   {
    "regiao": "madeira",
    "nome": "Madeira",
-   "especies": 1402,
-   "bytes": 171583
+   "especies": 1450,
+   "bytes": 177397
   },
   {
    "regiao": "portalegre",
    "nome": "Portalegre",
-   "especies": 1820,
-   "bytes": 222943
+   "especies": 1818,
+   "bytes": 222675
   },
   {
    "regiao": "porto",
    "nome": "Porto",
-   "especies": 2201,
-   "bytes": 269342
+   "especies": 2206,
+   "bytes": 270071
   },
   {
    "regiao": "santarem",
    "nome": "Santarém",
-   "especies": 2232,
-   "bytes": 273140
+   "especies": 2233,
+   "bytes": 273114
   },
   {
    "regiao": "setubal",
    "nome": "Setúbal",
-   "especies": 3101,
-   "bytes": 376322
+   "especies": 3098,
+   "bytes": 375753
   },
   {
    "regiao": "viana-do-castelo",
    "nome": "Viana do Castelo",
-   "especies": 1857,
-   "bytes": 223973
+   "especies": 1863,
+   "bytes": 224690
   },
   {
    "regiao": "vila-real",
    "nome": "Vila Real",
-   "especies": 2066,
-   "bytes": 244282
+   "especies": 2063,
+   "bytes": 243694
   },
   {
    "regiao": "viseu",
    "nome": "Viseu",
-   "especies": 1615,
-   "bytes": 196418
+   "especies": 1621,
+   "bytes": 197180
   }
  ]
 }
